@@ -1,2 +1,7 @@
-# INTERN-1
-NMAP
+MD5 HASH (1)
+mkdir MD5
+cd MD5
+echo "Certificate One" > certificate1.crt
+echo "Certificate Two" > certificate2.crt
+md5sum certificate1.crt
+md5sum certificate2.crt
