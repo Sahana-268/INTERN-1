@@ -1,0 +1,27 @@
+# Botnet Traffic Detection Analysis
+
+import pandas as pd
+
+# Load dataset from Excel file
+data = pd.read_excel("botnet_dataset.xlsx", sheet_name="Dataset")
+
+# Calculate statistics
+total = len(data)
+malicious = (data["label"] == 1).sum()
+
+detected = (
+    (data["label"] == 1) &
+    (data["predicted_label"] == 1)
+).sum()
+
+false_negative = malicious - detected
+
+accuracy = (detected / malicious) * 100
+fn_rate = (false_negative / malicious) * 100
+
+# Display results
+print("Total Packets:", total)
+print("Malicious Packets:", malicious)
+print("Detected Malicious:", detected)
+print("Detection Accuracy:", accuracy, "%")
+print("False Negative Rate:", fn_rate, "%")
