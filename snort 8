@@ -6,6 +6,8 @@ snort -V
 
 ip a
 
-sudo snort -T -c /etc/snort/snort.conf
+sudo find / -name snort.lua 2>/dev/null
 
-sudo snort -A console -q -c /etc/snort/snort.conf -i eth0
+sudo snort -T -c /etc/snort/snort.lua
+
+sudo snort -c /etc/snort/snort.lua -i eth0
