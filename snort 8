@@ -1,0 +1,11 @@
+sudo apt update
+
+sudo apt install snort -y
+
+snort -V
+
+ip a
+
+sudo snort -T -c /etc/snort/snort.conf
+
+sudo snort -A console -q -c /etc/snort/snort.conf -i eth0
