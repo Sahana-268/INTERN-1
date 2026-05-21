@@ -1,0 +1,9 @@
+UBUNTU: 
+ifconfig
+sudo snort -A alert_fast -c /etc/snort/snort.lua -i enp0s3
+KALI
+ping <ubuntu_IP>
+msfconsole
+use auxiliary/scanner/portscan/tcp
+set RHOSTS <ubuntu_IP>
+run
