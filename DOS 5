@@ -1,0 +1,23 @@
+# DDoS Attack Traffic Analysis
+
+# Server traffic analysis
+server_capacity = 3000
+attack_traffic = 9000
+
+excess = attack_traffic - server_capacity
+overload = (excess / server_capacity) * 100
+dropped = excess
+
+print("Excess Traffic:", excess, "requests/sec")
+print("Overload Percentage:", overload, "%")
+print("Dropped Requests:", dropped, "requests/sec")
+
+# Attack detection analysis
+actual_attacks = 1000
+detected_attacks = 850
+
+accuracy = (detected_attacks / actual_attacks) * 100
+missed = actual_attacks - detected_attacks
+
+print("Detection Accuracy:", accuracy, "%")
+print("Missed Attacks:", missed)
