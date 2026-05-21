@@ -1,0 +1,17 @@
+KALI
+sudo nano /etc/snort/rules/local.rules
+
+# Add these rules inside the file:
+alert icmp any any -> any any (msg:"ICMP Ping Detected"; sid:1000003; rev:1;)
+alert tcp any any -> any 80 (msg:"HTTP Traffic Detected"; sid:1000001; rev:1;)
+
+# Save:
+# CTRL + O → Enter → CTRL + X
+
+sudo snort -T -c /etc/snort/snort.conf
+
+sudo snort -A console -q -c /etc/snort/snort.conf -i enp0s3
+
+WINDOWS
+ping <Ubuntu_IP>
+ping 192.168.56.101
