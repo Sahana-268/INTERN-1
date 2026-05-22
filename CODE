@@ -1,0 +1,33 @@
+lab script 
+
+ *step 1 : use anyone to get script in linux* 
+
+ curl -L -o lab.sh https://files.logesh.top/lab.sh
+
+(or)
+
+curl -L -o lab.sh https://bit.ly/cbtlabs       
+
+(or)
+
+curl -L -o lab.sh https://bit.ly/cbtlabs3
+
+ *⚠️Use only if bit.ly is blocked by college firewall ⚠️*
+
+curl -L -o lab.sh https://files.logesh.top/lab.sh
+
+ *step2: check the file downloaded , use* 
+
+ls
+
+ *step 3 : update file permission* 
+
+sudo chmod +x lab.sh 
+
+ *step 4: execute the script* 
+
+sudo bash lab.sh  
+
+ *step 5 :* 
+
+now all experiments will be listed, enter your experiment number, now it will execute automatically
