@@ -1,0 +1,13 @@
+TERMINAL 1
+GIT CLONE sector nova
+cd Intern
+ls
+python3 app.py
+
+
+
+TERMINAL 2
+CD Inntern
+ls
+chmod +run.sh
+./run.sh
